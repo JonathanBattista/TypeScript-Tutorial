@@ -31,35 +31,35 @@
 
 // createUser({ name: "a", email: "a", isActive: true });
 
-type User = {
-  readonly _id: string;
-  name: string;
-  email: string;
-  isActive: boolean;
-  credcardDetails?: number;
-  //? means optional type
-};
+// type User = {
+//   readonly _id: string;
+//   name: string;
+//   email: string;
+//   isActive: boolean;
+//   credcardDetails?: number;
+//   //? means optional type
+// };
 
-let myUser: User = {
-  _id: "1234",
-  name: "h",
-  email: "j@j.com",
-  isActive: true,
-};
+// let myUser: User = {
+//   _id: "1234",
+//   name: "h",
+//   email: "j@j.com",
+//   isActive: true,
+// };
 
-type cardNumber = {
-  cardnumber: string;
-};
+// type cardNumber = {
+//   cardnumber: string;
+// };
 
-type cardDate = {
-  cardDate: string;
-};
+// type cardDate = {
+//   cardDate: string;
+// };
 
-type cardDetails = cardNumber &
-  cardDate & {
-    // & means to use both and all type aliases
-    cvv: number;
-  };
+// type cardDetails = cardNumber &
+//   cardDate & {
+//     // & means to use both and all type aliases
+//     cvv: number;
+//   };
 
-myUser.email = "h@gmail.com";
-// myUser._id= 'asa' // we cant do this because its read only
+// myUser.email = "h@gmail.com";
+// // myUser._id= 'asa' // we cant do this because its read only
