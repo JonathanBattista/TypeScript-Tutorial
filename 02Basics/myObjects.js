@@ -1,15 +1,11 @@
-var User = {
-    name: "jon",
-    email: "jon@jon.com",
-    isActive: true,
-};
-function createUser(_a) {
-    var string = _a.name, boolean = _a.isPaid;
+// const User = {
+//   name: "jon",
+//   email: "jon@jon.com",
+//   isActive: true,
+// };
+//you can rename your types if you want
+//type Mystring = string
+function createUser(user) {
+    return { name: "", email: "", isActive: true };
 }
-var newUser = { name: "jon", isPaid: false, email: "j@j.com" };
-// should stop you and needs an optional
-createUser(newUser);
-//function createCourse// function name// ()// function parameter:{}//return type{}//definition
-function createCourse() {
-    return { name: "reactjs", price: 399 };
-}
+createUser({ name: "a", email: "a", isActive: true });
