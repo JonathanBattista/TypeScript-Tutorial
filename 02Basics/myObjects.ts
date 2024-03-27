@@ -47,5 +47,19 @@ let myUser: User = {
   isActive: true,
 };
 
+type cardNumber = {
+  cardnumber: string;
+};
+
+type cardDate = {
+  cardDate: string;
+};
+
+type cardDetails = cardNumber &
+  cardDate & {
+    // & means to use both and all type aliases
+    cvv: number;
+  };
+
 myUser.email = "h@gmail.com";
 // myUser._id= 'asa' // we cant do this because its read only
