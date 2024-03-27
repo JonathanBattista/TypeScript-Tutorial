@@ -7,11 +7,22 @@ interface IUser {
   startTrial(): string;
   getCoupon(couponname: string, value: number): number;
 }
+// REOPENIGN THE INTERFACE
+interface IUser {
+  githubToken: string;
+}
+
+//INHERITANCE
+
+interface IAdmin extends IUser {
+  roel: "admin" | "ta" | "learner";
+}
 
 const Ijon: IUser = {
   dbId: 22,
   email: " j@j.com",
   userId: 2211,
+  githubToken: "github",
   startTrial: () => {
     return "trial started";
   },
