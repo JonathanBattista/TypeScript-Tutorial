@@ -3,9 +3,11 @@
 //   email: "jon@jon.com",
 //   isActive: true,
 // };
-//you can rename your types if you want
-//type Mystring = string
-function createUser(user) {
-    return { name: "", email: "", isActive: true };
-}
-createUser({ name: "a", email: "a", isActive: true });
+var myUser = {
+    _id: "1234",
+    name: "h",
+    email: "j@j.com",
+    isActive: true,
+};
+myUser.email = "h@gmail.com";
+// myUser._id= 'asa' // we cant do this because its read only
