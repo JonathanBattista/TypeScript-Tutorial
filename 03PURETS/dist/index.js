@@ -17,7 +17,8 @@ class User {
     ) {
         this.email = email;
         this.name = name;
-        this._courseCount = 1;
+        this._courseCount = 1; // can be inherited
+        // private _courseCount = 1; cant be inherited
         this.city = "Balt";
     }
     // private method
@@ -37,6 +38,17 @@ class User {
             throw new Error("Course count should be more than 1");
         }
         this._courseCount = courseNum;
+    }
+}
+// private does not allow that property to be inherited
+// protected allows properties of classes to be inherited
+class SubUser extends User {
+    constructor() {
+        super(...arguments);
+        this.isFamily = true;
+    }
+    changeCourseCount() {
+        this._courseCount = 4;
     }
 }
 const jon = new User("jon@jon.com", "jon");

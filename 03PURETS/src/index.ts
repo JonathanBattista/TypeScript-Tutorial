@@ -14,7 +14,8 @@
 
 // better way to wrie it and introducing the public and priavte keyword
 class User {
-  private _courseCount = 1;
+  protected _courseCount = 1; // can be inherited
+  // private _courseCount = 1; cant be inherited
   readonly city: string = "Balt";
   constructor(
     public email: string,
@@ -38,6 +39,15 @@ class User {
       throw new Error("Course count should be more than 1");
     }
     this._courseCount = courseNum;
+  }
+}
+
+// private does not allow that property to be inherited
+// protected allows properties of classes to be inherited
+class SubUser extends User {
+  isFamily: boolean = true;
+  changeCourseCount() {
+    this._courseCount = 4;
   }
 }
 
