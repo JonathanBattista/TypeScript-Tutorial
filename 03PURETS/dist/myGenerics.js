@@ -15,3 +15,14 @@ function identityFour(val) {
     return val;
 } // shorthand
 //identityFour<Bottle>({})
+function getSearchProducts(products) {
+    // do some database operations
+    const myIndex = 3;
+    return products[myIndex];
+}
+//convert into an arrow fucntion
+const getMoreSearchProducts = (products) => {
+    // do some database operations
+    const myIndex = 4;
+    return products[myIndex];
+};

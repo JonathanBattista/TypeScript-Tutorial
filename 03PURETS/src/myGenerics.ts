@@ -25,3 +25,17 @@ interface Bottle {
 }
 
 //identityFour<Bottle>({})
+
+function getSearchProducts<T>(products: T[]): T {
+  // do some database operations
+  const myIndex = 3;
+  return products[myIndex];
+}
+
+//convert into an arrow fucntion
+
+const getMoreSearchProducts = <T>(products: T[]): T => {
+  // do some database operations
+  const myIndex = 4;
+  return products[myIndex];
+};
