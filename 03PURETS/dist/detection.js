@@ -31,3 +31,26 @@ function isAdminAccount(account) {
         return account.isAdmin;
     }
 }
+// can only be used when we are using the new keyword
+function logValue(x) {
+    if (x instanceof Date) {
+        console.log(x.toUTCString());
+    }
+    else {
+        console.log(x.toUpperCase());
+    }
+}
+// pet is fish allows pet to be defined isntead of a boolean
+function isFish(pet) {
+    return pet.swim !== undefined;
+}
+function getFood(pet) {
+    if (isFish(pet)) {
+        pet;
+        return "fish food";
+    }
+    else {
+        pet;
+        return "bird food";
+    }
+}
